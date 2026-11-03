@@ -150,7 +150,7 @@ nav a:hover{
     position:absolute;
     top:0;
     bottom:0;
-    width:15%;
+    width:20%;
     z-index:2;
 }
 .zone-left{ left:0; }
