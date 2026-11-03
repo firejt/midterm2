@@ -10,6 +10,10 @@ body{
     font-family: "Redaction 50", serif;
 }
 
+.burger {
+    display: none;
+}
+
 ::selection{
     background: rgba(255, 99, 143);
     color: rgba(255, 255, 255, 1);
@@ -172,7 +176,18 @@ footer{
 /*RWD*/
 @media screen and (max-width: 768px) {
 
-    /* 隱藏導航列 */
+    .burger {
+        display: block;
+        background-color: transparent;
+        color: rgba(255, 99, 143);
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        left:20px;
+        border: none;
+        cursor: pointer;
+    }
+    
     nav {
         display: none;
     }
