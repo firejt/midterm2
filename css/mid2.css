@@ -137,6 +137,11 @@ nav a:hover{
     animation: toRight 10s linear infinite paused;
 }
 
+.hint{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.281);
+    font-size: 1.2rem;
+}
 @keyframes toLeft{
     to{ transform: translateX(calc(-100% / 3)); }
 }
