@@ -145,12 +145,12 @@ nav a:hover{
     to  { transform: translateX(0); }
 }
 
-/* 左右感應區：各佔 40%，中間 20% 是停止區 */
+/* 左右感應區：各佔 30%，中間 40% 是停止區 */
 .zone{
     position:absolute;
     top:0;
     bottom:0;
-    width:40%;
+    width:30%;
     z-index:2;
 }
 .zone-left{ left:0; }
