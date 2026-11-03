@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    color:rgb(255, 255, 255);
+    background-color: black;
+
+    font-family: "Redaction 50", serif;
+}
+
+::selection{
+    background: rgba(255, 99, 143);
+    color: rgba(255, 255, 255, 1);
+}
+
+a{
+    text-decoration: none;
+    color: rgba(255, 99, 143);
+    display: inline-block;
+}
+
+a:hover{
+    color: rgb(167, 16, 21);
+}
+
+/*header*/
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 200000;
+
+    background-color: rgb(255, 255, 255);
+}
+
+/*menu*/
+.menu{
+    width: 80%;
+    margin: 10px auto;
+    display:flex;
+}
+
+/*logo*/
+.logo{
+    flex:0 0 120px;
+}
+
+.logo img{
+    width: 100%;
+    margin: auto;
+    background: rgba(255, 99, 143, 0);
+	border-radius: 30%;
+}
+
+/*nav*/
+nav{
+    /*float: right;*/
+    flex:1;
+    text-align: right;
+}
+
+nav a{
+    padding: 50px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+/*space*/
+.space {
+    padding: 44px;
+}
+
+/*intro*/
+
+.intro{
+    box-sizing:border-box;
+    padding:40px;
+    width: 80vw;
+    margin: 0 auto;
+    color:white;
+    text-align: center;
+}
+
+.intro img{
+    width: 30vw;
+    border-radius: 20%;
+    opacity: 0.7;
+}
+
+.intro h1{font-size:2rem; color:rgba(255, 99, 143);}
+.intro h3{font-size: 1em; color:rgba(255, 99, 143);}
+
+/*card*/
+
+.marquee{
+    position:relative;
+    overflow:hidden;
+    width:100%;
+}
+
+
+.card{
+    flex:0 0 50vw;
+    box-sizing:border-box;
+    padding:40px;
+    color:white;
+
+    display:block;
+    width:auto;
+    margin:0;
+    gap:0;
+}
+.card h2{ font-size:3rem; color:rgba(255, 99, 143); }
+.card h3{ font-size:1.6rem; }
+.card ul{ padding-left:1.2em; }
+.card li{ text-align:left; margin-bottom:.5em; }
+
+.track, .track-inner{
+    display:flex;
+    width:max-content;
+}
+
+.track{
+    animation: toLeft 10s linear infinite paused;
+}
+.track-inner{
+    animation: toRight 10s linear infinite paused;
+}
+
+@keyframes toLeft{
+    to{ transform: translateX(calc(-100% / 3)); }
+}
+@keyframes toRight{
+    from{ transform: translateX(calc(-100% / 3)); }
+    to  { transform: translateX(0); }
+}
+
+/* 左右感應區：各佔 40%，中間 20% 是停止區 */
+.zone{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:40%;
+    z-index:2;
+}
+.zone-left{ left:0; }
+.zone-right{ right:0; }
+
+/* 滑鼠在哪一側，就讓對應的動畫跑起來 */
+.zone-left:hover  ~ .track{ animation-play-state: running; }
+.zone-right:hover ~ .track .track-inner{ animation-play-state: running; }
+
+
+/*footer*/
+footer{
+    clear: both;
+    width: 100%;
+    padding: 60px 0px;
+    text-align: center;
+    background-color: rgb(239, 62, 106);
+    font-size: 1.2rem;
+    color:rgb(255, 255, 255);
+}
