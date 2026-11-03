@@ -167,3 +167,40 @@ footer{
     font-size: 1.2rem;
     color:rgb(255, 255, 255);
 }
+
+
+/*RWD*/
+@media screen and (max-width: 768px) {
+
+    /* 隱藏導航列 */
+    nav {
+        display: none;
+    }
+
+    
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+
+    .logo img {
+        transform-origin: center center; /* 以圖片中心點縮放 */
+    }
+
+    .intro h1{font-size:1.3rem; color:rgba(255, 99, 143);}
+    .intro h3{font-size: 1em; color:rgba(255, 99, 143);}
+
+    p{font-size: 0.8rem;}
+
+    .card h2{ font-size:1.3rem;}
+    .card h3{ font-size:1.1rem; }
+    .card ul{ padding-left:5em; }
+    .card li{ text-align:left; margin-bottom:.5em; font-size: .8em;}
+
+    .card{
+    flex:0 0 150vw;
+    }
+}
